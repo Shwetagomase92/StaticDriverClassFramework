@@ -15,6 +15,8 @@ public class Post_TC1
 		{
 			int statusCode=API_Common_Functions.response_statusCode(Post_Req_Repository.baseURI(), Post_Req_Repository.post_resource(), Post_Req_Repository.post_req_tc1());
 			System.out.println(statusCode);
+			
+			//check the status code is correct then it will fetch response body
 			if(statusCode==201)
 			{
 				String responseBody=API_Common_Functions.response_Body(Post_Req_Repository.baseURI(), Post_Req_Repository.post_resource(), Post_Req_Repository.post_req_tc1());
@@ -29,6 +31,7 @@ public class Post_TC1
 		}
 		
 	}
+	
 	public static void validator(String responseBody, int statusCode) throws IOException
 	{
 		JsonPath jspRes=new JsonPath(responseBody);

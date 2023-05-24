@@ -8,6 +8,7 @@ public class DriverClass
 
 	public static void main(String[] args) throws IOException 
 	{
+		//static driver class because we call the test class execute method
 		Post_TC1.execute();
 
 	}
